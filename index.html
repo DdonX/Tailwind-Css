@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SKLD - Industry Experts Redefining Manufacturing & Sourcing</title>
-    <!-- Tailwind CSS CDN -->
+    <script src="java.js"></script>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Font (Plus Jakarta Sans) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,6 +26,7 @@
     </style>
 </head>
 <body class="text-[#1a1a1a] antialiased">
+<script src = "java.js"></script>
 
    
 
@@ -135,30 +137,43 @@
                 </div>
             </div>
 
-            <!-- Custom Branded Cards Grid (No separate CSS required) -->
+            <!-- Branded Card -->
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
     
-    <!-- Skit Store Card -->
-    <div class="bg-[#ced4fc] border-[9px] border-[#292929] rounded-[32px] aspect-[4/5] flex items-center justify-center p-8 hover:scale-[1.02] transition-transform duration-300 ease-out">
+    <div class="brand-card relative bg-[#ced4fc] border-[9px] border-[#292929] rounded-[32px] aspect-[4/5] flex items-center justify-center p-8 hover:scale-[1.02] transition-transform duration-300 ease-out overflow-hidden cursor-pointer">
         <img src="3f80eddd2c491bbaf48a91609c276ecadb8568e9.png" alt="Skit Store" class="w-[72%] h-auto object-contain">
+        <div class="popup-box absolute bottom-4 left-4 right-4 bg-white text-black p-3 rounded-2xl opacity-0 translate-y-4 pointer-events-none transition-all duration-300 ease-out text-center">
+            <h4 class="font-bold text-sm leading-tight">Retail & E-commerce</h4>
+            <p class="text-[12px] text-black mt-0.5">Your go-to retail destination for school and office supplies. Shop in-store or online with nationwide delivery.</p>
+        </div>
     </div>
 
-    <!-- Marcel Hughes Card -->
-    <div class="bg-[#fef0cd] border-[9px] border-[#292929] rounded-[32px] aspect-[4/5] flex items-center justify-center p-8 hover:scale-[1.02] transition-transform duration-300 ease-out">
+    <div class="brand-card relative bg-[#fef0cd] border-[9px] border-[#292929] rounded-[32px] aspect-[4/5] flex items-center justify-center p-8 hover:scale-[1.02] transition-transform duration-300 ease-out overflow-hidden cursor-pointer">
         <img src="28274fa5e619bf43e0fa83edbc53c89d1fa460ef.png" alt="Marcel Hughes" class="w-[68%] h-auto object-contain">
+        <div class="popup-box absolute bottom-4 left-4 right-4 bg-white text-black p-3 rounded-2xl opacity-0 translate-y-4 pointer-events-none transition-all duration-300 ease-out text-center shadow-lg">
+            <h4 class="font-bold text-sm leading-tight">Educational Uniforms</h4>
+            <p class="text-[12px] text-black mt-0.5">Premium school and corporate uniforms tailored for durability, comfort, and bulk fulfillment. Designed and produced locally to meet global standards.</p>
+        </div>
     </div>
 
-    <!-- Weaveworx Card -->
-    <div class="bg-[#fcd5ce] border-[9px] border-[#292929] rounded-[32px] aspect-[4/5] flex items-center justify-center p-8 hover:scale-[1.02] transition-transform duration-300 ease-out">
+    <div class="brand-card relative bg-[#fcd5ce] border-[9px] border-[#292929] rounded-[32px] aspect-[4/5] flex items-center justify-center p-8 hover:scale-[1.02] transition-transform duration-300 ease-out overflow-hidden cursor-pointer">
         <img src="1b8b2e88bba8f0396e211f59924f2805b35af9ef.png" alt="Weaveworx" class="w-[72%] h-auto object-contain">
+        <div class="popup-box absolute bottom-4 left-4 right-4 bg-white text-black p-3 rounded-2xl opacity-0 translate-y-4 pointer-events-none transition-all duration-300 ease-out text-center shadow-lg">
+            <h4 class="font-bold text-sm leading-tight">Garment Manufacturing</h4>
+            <p class="text-[12px] text-black mt-0.5">Our dedicated garment manufacturing brand producing high-quality clothing for government, corporate, and retail clients.</p>
+        </div>
     </div>
 
-    <!-- SKLD Relief Card -->
-    <div class="bg-[#e1e6eb] border-[9px] border-[#292929] rounded-[32px] aspect-[4/5] flex items-center justify-center p-8 hover:scale-[1.02] transition-transform duration-300 ease-out">
+    <div class="brand-card relative bg-[#e1e6eb] border-[9px] border-[#292929] rounded-[32px] aspect-[4/5] flex items-center justify-center p-8 hover:scale-[1.02] transition-transform duration-300 ease-out overflow-hidden cursor-pointer">
         <img src="b83e1ec89ac36117820d41cb5e94b86b4889ae97.png" alt="SKLD Relief" class="w-[72%] h-auto object-contain">
+        
+        <div class="popup-box absolute bottom-4 left-4 right-4 bg-white text-black p-3 rounded-2xl opacity-0 translate-y-4 pointer-events-none transition-all duration-300 ease-out text-center shadow-lg">
+            <h4 class="font-bold text-sm leading-tight">SKLD Relief</h4>
+            <p class="text-[12px] text-black mt-0.5">Our CSR initiative, focused on giving back through scholarships, emergency education support, and rural school aid.</p>
+        </div>
+    </div>
     </div>
 
-</div>
         </section>
 
 
@@ -203,43 +218,48 @@
 
 <!-- Metric Stats Section Container  -->
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-    
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 mt-12 mb-16">
-
+        
         <div class="bg-gray-200 rounded-[24px] p-6 lg:p-8 flex flex-col justify-between aspect-[4/3]">
-            <span class="text-5xl sm:text-6xl lg:text-[72px] font-normal md:font-medium text-neutral-900 tracking-tight leading-none mb-20">10+</span>
+            <span class="stat-number text-5xl sm:text-6xl lg:text-[72px] font-normal md:font-medium text-neutral-900 tracking-tight leading-none mb-20" 
+                  data-target="10" 
+                  data-suffix="+">0+</span>
             <span class="text-xs sm:text-sm text-black leading-snug font-normal">
                 years serving<br>the education sector
             </span>
         </div>
 
         <div class="bg-gray-200 rounded-[24px] p-6 lg:p-8 flex flex-col justify-between aspect-[4/3]">
-            <span class="text-5xl sm:text-6xl lg:text-[72px] font-normal md:font-medium text-neutral-900 tracking-tight leading-none mb-20">200+</span>
+            <span class="stat-number text-5xl sm:text-6xl lg:text-[72px] font-normal md:font-medium text-neutral-900 tracking-tight leading-none mb-20" 
+                  data-target="200" 
+                  data-suffix="+">0+</span>
             <span class="text-xs sm:text-sm text-black leading-snug font-normal">
                 institutions<br>served nationwide
             </span>
         </div>
 
         <div class="bg-gray-200 rounded-[24px] p-6 lg:p-8 flex flex-col justify-between aspect-[4/3]">
-            <span class="text-5xl sm:text-6xl lg:text-[72px] font-normal md:font-medium text-neutral-900 tracking-tight leading-none mb-20">100%</span>
+            <span class="stat-number text-5xl sm:text-6xl lg:text-[72px] font-normal md:font-medium text-neutral-900 tracking-tight leading-none mb-20" 
+                  data-target="100" 
+                  data-suffix="%">0%</span>
             <span class="text-xs sm:text-sm text-black leading-snug font-normal">
                 locally produced<br>uniforms & furniture
             </span>
         </div>
 
         <div class="bg-gray-200 rounded-[24px] p-6 lg:p-8 flex flex-col justify-between aspect-[4/3]">
-            <span class="text-4xl sm:text-6xl lg:text-[72px] font-normal md:font-medium text-neutral-900 tracking-tight leading-none mb-20">50+</span>
+            <span class="stat-number text-4xl sm:text-6xl lg:text-[72px] font-normal md:font-medium text-neutral-900 tracking-tight leading-none mb-20" 
+                  data-target="50" 
+                  data-suffix="+">0+</span>
             <span class="text-xs sm:text-sm text-black leading-snug font-normal">
                 infrastructure<br>projects delivered
             </span>
         </div>
 
     </div>
-
 </div>
 
-
-        <!-- ==================== SECTION 5: GUIDED BY PURPOSE (DARK GRID) ==================== -->
+        <!-- ==================== SECTION 5 DARK GRID ==================== -->
         <section class="bg-[#111111] text-white rounded-[32px] p-8 md:p-14 mb-12">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12">
                 <div class="lg:col-span-7">
@@ -348,7 +368,7 @@
 
 </div>
 
-            <div class="justify-items-center grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 px-4">
+            <div onclick="alert(404)" class="justify-items-center grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 px-4">
                 
                 <!-- Col 1 -->
                 <div>
