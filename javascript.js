@@ -105,4 +105,44 @@ if (document.readyState === "loading") {
             popup.classList.add("opacity-0", "translate-y-4", "pointer-events-none");
         });
     });
-});
+
+    const contactForm = document.getElementById("contactForm");
+    const submitBtn = document.getElementById("submitBtn");
+    const formStatus = document.getElementById("formStatus");
+    const chatBtn = document.getElementById("chatBtn");
+
+    // Form Submission Handler
+    if (contactForm) {
+        contactForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            // Disable button during submission
+            submitBtn.disabled = true;
+            submitBtn.innerText = "SENDING...";
+
+            // Simulate form submission delay
+            setTimeout(() => {
+                contactForm.reset();
+                submitBtn.disabled = false;
+                submitBtn.innerText = "SUBMIT";
+
+                // Show success feedback
+                formStatus.classList.remove("hidden", "text-red-600");
+                formStatus.classList.add("text-green-600");
+                formStatus.innerText = "Thank you! Your message has been sent successfully.";
+
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    formStatus.classList.add("hidden");
+                }, 5000);
+            }, 1200);
+        });
+    }
+
+    // Chat Widget Click Handler
+    if (chatBtn) {
+        chatBtn.addEventListener("click", () => {
+            alert("Opening Live Chat support...");
+        });
+    }
+});    
