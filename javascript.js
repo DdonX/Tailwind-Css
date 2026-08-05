@@ -120,7 +120,7 @@ if (document.readyState === "loading") {
                 formStatus.classList.remove("hidden", "text-red-600");
                 formStatus.classList.add("text-green-600");
                 formStatus.innerText = "Thank you! Your message has been sent successfully.";
-                }, 5000);
+                }, 2500);
 
                 setTimeout(() => {
                     formStatus.classList.add("hidden");
