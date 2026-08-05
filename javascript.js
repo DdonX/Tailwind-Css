@@ -53,7 +53,6 @@ function initCounters() {
             const elapsedTime = currentTime - startTime;
             const progress = Math.min(elapsedTime / duration, 1);
             
-            // Calculate current number
             const currentCount = Math.floor(progress * target);
             counter.innerText = currentCount + suffix;
 
@@ -67,12 +66,11 @@ function initCounters() {
         requestAnimationFrame(updateCount);
     };
 
-    // IntersectionObserver with a safer threshold (0.1 = 10% visible)
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 animateCounter(entry.target);
-                observer.unobserve(entry.target); // Animate once
+                observer.unobserve(entry.target); 
             }
         });
     }, { threshold: 0.1 });
@@ -80,26 +78,22 @@ function initCounters() {
     counters.forEach(counter => observer.observe(counter));
 }
 
-// Safely execute regardless of script load order
 if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", initCounters);
 } else {
     initCounters();
 }
-    // Select all brand cards
     const cards = document.querySelectorAll(".brand-card");
 
     cards.forEach(card => {
         const popup = card.querySelector(".popup-box");
         if (!popup) return;
 
-        // Show popup text box on mouse hover
         card.addEventListener("mouseenter", () => {
             popup.classList.remove("opacity-0", "translate-y-4", "pointer-events-none");
             popup.classList.add("opacity-100", "translate-y-0");
         });
 
-        // Hide popup text box when mouse leaves
         card.addEventListener("mouseleave", () => {
             popup.classList.remove("opacity-100", "translate-y-0");
             popup.classList.add("opacity-0", "translate-y-4", "pointer-events-none");
@@ -111,35 +105,29 @@ if (document.readyState === "loading") {
     const formStatus = document.getElementById("formStatus");
     const chatBtn = document.getElementById("chatBtn");
 
-    // Form Submission Handler
     if (contactForm) {
         contactForm.addEventListener("submit", (e) => {
             e.preventDefault();
 
-            // Disable button during submission
             submitBtn.disabled = true;
             submitBtn.innerText = "SENDING...";
+            
 
-            // Simulate form submission delay
             setTimeout(() => {
                 contactForm.reset();
                 submitBtn.disabled = false;
                 submitBtn.innerText = "SUBMIT";
-
-                // Show success feedback
                 formStatus.classList.remove("hidden", "text-red-600");
                 formStatus.classList.add("text-green-600");
                 formStatus.innerText = "Thank you! Your message has been sent successfully.";
+                }, 5000);
 
-                // Hide message after 5 seconds
                 setTimeout(() => {
                     formStatus.classList.add("hidden");
-                }, 5000);
-            }, 1200);
+            });
         });
     }
 
-    // Chat Widget Click Handler
     if (chatBtn) {
         chatBtn.addEventListener("click", () => {
             alert("Opening Live Chat support...");
